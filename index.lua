@@ -30,7 +30,7 @@ function M.load(path)
 end
 
 function M.request(str)
-  local req = Request.parse(str)
+  local req = Request.class().parse(str)
   local res = shiori:request(req)
   return res:tostring()
 end

@@ -3,8 +3,7 @@ local FH      = require("fh")
 local LC      = require("luachild")
 local Path    = require("path")
 
-local M = Class()
-M.__index = M
+local M = {}
 
 -- TODO OS
 local NL  = string.char(0x0a)
@@ -124,4 +123,4 @@ function M:writeline(str)
   self.pipe_w:flush()
 end
 
-return M
+return Class(M)
